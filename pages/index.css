@@ -1,0 +1,19 @@
+#page-wrapper {
+    background-color: lightcoral;
+    width: 100%;
+    border-radius: 50px;
+    margin: 100px;
+}
+
+#title {
+
+    background-color: lightseagreen;
+    margin: 30px;
+    padding: 30px;
+}
+
+#stats {
+    padding: 30px;
+    background-color: magenta;
+}
+
