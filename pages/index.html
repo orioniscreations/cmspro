@@ -27,9 +27,14 @@
         <div id="stats">
 
 
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col" style="background-color: chocolate;">
+
+
+                        <div class="timer">
+                            <div id="bar" class="bar"></div>
+                        </div>
                         <ul>
                             <li>Health</li>
                             <li>Hunger</li>
@@ -39,7 +44,8 @@
                     </div>
                     <div class="col">
                         <div id="spriteImg">
-
+                            <img src="/img/pkmn/charmander/charHappy.gif" alt="sprite"
+                                style="display: block; margin: auto; padding:20px">
                         </div>
                     </div>
                 </div>
@@ -48,6 +54,8 @@
 
 
         </div>
+
+
 
     </div>
 
@@ -64,5 +72,15 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 </body>
+
+<script>
+
+    const bar = document.querySelector('#bar');
+
+    let timeLimit = "5s";
+
+    bar.style.animationDuration = timeLimit;
+
+</script>
 
 </html>

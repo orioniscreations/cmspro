@@ -1,46 +1,107 @@
 <!DOCTYPE html>
-<html>
-<style>
-    #progressBar {
-        width: 90%;
-        margin: 10px auto;
-        height: 22px;
-        background-color: #0A5F44;
-    }
+<html lang="en">
 
-    #progressBar div {
-        height: 100%;
-        text-align: right;
-        padding: 0 10px;
-        line-height: 22px;
-        /* same as #progressBar height if we want text middle aligned */
-        width: 0;
-        background-color: #CBEA00;
-        box-sizing: border-box;
-    }
-</style>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<link rel="stylesheet" href="index.css">
+<script src="index.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .timer {
+            position: relative;
+            height: 50px;
+            width: 500px;
+            border: 3px solid black;
+            border-radius: 25px;
+            overflow: hidden;
+        }
+
+        .bar {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #9dff47;
+            animation: countdown linear;
+        }
+
+        @keyframes countdown {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+    </style>
+
+
+</head>
 
 <body>
 
-    <div id="progressBar">
-        <div class="bar"></div>
+
+    <div id="page-wrapper">
+
+        <div id="title">
+            <h1>My Pet Monster</h1>
+        </div>
+
+        <div id="stats">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="timer" style="margin: 20px;">
+                            <div id="hungerBar" class="bar">
+                                <div style="padding: 10px; margin-left: 50px;">Hunger</div>
+                            </div>
+
+
+                        </div>
+                        <div class="timer" style="margin: 20px;">
+                            <div id="funBar" class="bar">
+                                <div style="padding: 10px; margin-left: 50px;">Fun</div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col">
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
     </div>
 
 </body>
 
 <script>
 
-    function progress(timeleft, timetotal, $element) {
-        var progressBarWidth = timeleft * $element.width() / timetotal;
-        $element.find('div').animate({ width: progressBarWidth }, 500).html(Math.floor(timeleft / 60) + ":" + timeleft % 60);
-        if (timeleft > 0) {
-            setTimeout(function () {
-                progress(timeleft - 1, timetotal, $element);
-            }, 1000);
-        }
-    };
+    const hungerBar = document.querySelector('#hungerBar');
+    const funBar = document.querySelector('#funBar');
 
-    progress(600, 600, $('#progressBar'));
+    let hungerTimeLimit = "40s";
+    let funTimeLimit = "20s";
+
+    hungerBar.style.animationDuration = hungerTimeLimit;
+    funBar.style.animationDuration = funTimeLimit;
 
 </script>
 

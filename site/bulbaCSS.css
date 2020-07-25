@@ -1,0 +1,59 @@
+.sprite {
+	width: 102px;
+	height: 148px;
+	margin-top: 40px;
+}
+
+.right {
+	background-image: url(/img/pkmn/bulbasaur/bulbaStanding.png);
+}
+
+.left {
+	background-image: url(/img/pkmn/bulbasaur/bulbaStandingLeft.png);
+}
+
+.walk-right {
+	background-image: url(/img/pkmn/bulbasaur/bulbaWalkRight.png);
+	-webkit-animation: walk 0.9s steps(6) infinite;
+	-moz-animation: walk 0.9s steps(6) infinite;
+	-ms-animation: walk 0.9s steps(6) infinite;
+	-o-animation: walk 0.9s steps(6) infinite;
+	animation: walk 0.9s steps(6) infinite;
+}
+
+.walk-left {
+	background-image: url(/img/pkmn/bulbasaur/bulbaWalkLeft.png);
+	-webkit-animation: walk .9s steps(6) infinite;
+	-moz-animation: walk .9s steps(6) infinite;
+	-ms-animation: walk .9s steps(6) infinite;
+	-o-animation: walk .9s steps(6) infinite;
+	animation: walk .9s steps(6) infinite;
+}
+
+@-webkit-keyframes walk {
+	from { background-position: 0px; }
+	to { background-position: -612px; }
+}
+@-moz-keyframes walk {
+	from { background-position: 0px; }
+	to { background-position: -612px; }
+}
+@-ms-keyframes walk {
+	from { background-position: 0px; }
+	to { background-position: -612px; }
+}
+@-o-keyframes walk {
+	from { background-position: 0px; }
+	to { background-position: -612px; }
+}
+@-keyframes walk {
+	from { background-position: 0px; }
+	to { background-position: -612px; }
+}
+
+#bulbaInnerCont {
+    width: 85%;
+    height: 90%;
+    margin: auto;
+}
+

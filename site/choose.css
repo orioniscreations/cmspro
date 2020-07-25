@@ -1,0 +1,68 @@
+html {
+    margin: 0;
+}
+
+
+#selectCont {
+    background-image: url(/img/pkmn/backdrop.png);
+    background-position: center;
+    margin: auto;
+    margin-top: 50px;
+  min-width: 734px;
+  max-width: 734px;
+  min-height: 475px;
+  max-height: 475px;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+#bulbaCont {
+    background-image: url(/img/pkmn/bulbaBack.png);
+    background-position: center;
+    margin: auto;
+    margin-top: 50px;
+  min-width: 734px;
+  max-width: 734px;
+  min-height: 475px;
+  max-height: 475px;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+#titleText{
+    width: 400px;
+    margin-left: 50px;
+}
+
+#pokeballs {
+    width: 80%;
+      height: 50%;
+      top: 25%;
+      margin: 0 auto;
+      position: relative;
+
+   margin-top: 60px;
+  
+}
+
+
+.hand  {
+    display: none;
+}
+
+.hand a:hover {
+    display: block;
+}
+
+#charPoke {
+
+  
+    display: none;
+    background: url("/img/pkmn/bulbapoke.png") no-repeat;
+    display: inline-block;
+}
+
+#charPoke :hover {
+   
+        background: url("images/card-front.jpg") no-repeat;
+}
