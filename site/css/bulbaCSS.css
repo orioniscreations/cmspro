@@ -30,7 +30,7 @@
 	animation: walk .9s steps(6) infinite;
 }
 
-@-webkit-keyframes walk {
+/* @-webkit-keyframes walk {
 	from { background-position: 0px; }
 	to { background-position: -612px; }
 }
@@ -49,11 +49,48 @@
 @-keyframes walk {
 	from { background-position: 0px; }
 	to { background-position: -612px; }
-}
+} */
 
 #bulbaInnerCont {
     width: 85%;
     height: 90%;
-    margin: auto;
+	margin: auto;
+	
 }
 
+#pokeCutieB{
+	width: 30%; 
+	margin-top: 220px; 
+	margin-left: 35%;
+	
+}
+
+.container{
+	position: fixed;
+	top: 30%;
+	left: 60%;
+	transform: translate(-50%, -50%);
+	width: 90%;
+}
+
+#play {
+	position: absolute;
+	top: 50px;
+}
+
+#potion {
+	position: absolute;
+	top: 160px;
+}
+
+#feed {
+	position: absolute;
+	top: 130px;
+	right: 0;
+}
+
+#groom {
+	position: absolute;
+	top: 160px;
+	right: 0;
+}

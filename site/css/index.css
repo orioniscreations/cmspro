@@ -1,0 +1,131 @@
+html{ 
+    margin: 0px;
+}
+
+body{
+    background-image: url(/img/background/2gfwG.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#bodyCont{
+
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 600px;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 240, 0.6);
+    
+}
+
+
+#login{
+    position: fixed;
+   top:20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ 
+    
+    z-index: 1;
+}
+
+
+
+/* LOG IN */
+
+#loginCont{
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    
+    border-radius: 25px;
+    background-color: rgb(255, 255, 240); 
+
+    padding: 40px;
+}
+
+#logButt{
+    position: fixed;
+    margin: 20px;
+    top: 90%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    
+  
+}
+
+@import url(https://fonts.googleapis.com/css?family=Karla);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
+
+.wrap{
+  padding:120px 0;
+  font-size:30px;
+ 
+  width:400px;
+
+  margin:0 auto;
+  text-align:center;
+}
+
+input{
+
+  font-weight:300;
+  border:0;
+  border-bottom:1px solid #ff5407;
+  width:100%;
+  height:36px;
+  font-size:26px;
+}
+
+input:focus{
+  outline:none;
+  box-shadow:none;
+  background:#ffeae2;
+}
+
+button{
+  border:0;
+  background:transparent;
+  padding:5px;
+  margin-top:50px;
+  position:relative;
+  outline:0;
+}
+
+.buttonafter:after{
+content:'';
+display:block;
+position:absolute;
+top:8px;
+left:100%; /*should be set to 100% */
+width:0;
+height:0;
+border-color: transparent transparent transparent #14a03d; /*border color should be same as div div background color*/
+border-style: solid;
+border-width: 5px;
+
+}
+
+.forgot{
+  background:#a0a0a0;
+  color:#fff;
+  float:left;
+}
+
+.login{
+  background:#a0a0a0;
+  color:#fff;
+  float:right;
+}
+
+.login.buttonafter {
+    background:#14a03d;
+}

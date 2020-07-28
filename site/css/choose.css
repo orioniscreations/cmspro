@@ -1,0 +1,134 @@
+html {
+    margin: 0;
+}
+
+
+#selectCont {
+    background-image: url(/img/pkmn/backdrop.png);
+    background-position: center;
+  
+  min-width: 734px;
+  max-width: 734px;
+  min-height: 475px;
+  max-height: 475px;
+
+  padding: 10px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#credits{
+    bottom: 0px;
+    position: fixed;
+    margin-left: 30%;
+}
+
+#bulbaCont {
+    background-image: url(/img/pkmn/bulbaBack.png);
+    background-position: center;
+    margin: auto;
+    margin-top: 50px;
+  min-width: 734px;
+  max-width: 734px;
+  min-height: 475px;
+  max-height: 475px;
+ 
+  padding: 10px;
+}
+
+#titleText{
+    width: 400px;
+    margin-left: 50px;
+}
+
+#pokeballs {
+    width: 80%;
+      height: 50%;
+      top: 25%;
+      margin: 0 auto;
+      position: relative;
+
+   margin-top: 60px;
+  
+}
+
+
+.hand  {
+    display: none;
+}
+
+.hand a:hover {
+    display: block;
+}
+
+#charPoke {
+
+  
+    display: none;
+    background: url("/img/pkmn/bulbapoke.png") no-repeat;
+    display: inline-block;
+}
+
+#charPoke :hover {
+   
+        background: url("images/card-front.jpg") no-repeat;
+}
+
+/* sidebar */
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: ivory;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #dbdf09;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #dbdf09;
+  }
+  
+
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
