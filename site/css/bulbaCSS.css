@@ -75,12 +75,12 @@
 
 #play {
 	position: absolute;
-	top: 50px;
+	top: 100px;
 }
 
 #potion {
 	position: absolute;
-	top: 160px;
+	top: 300px;
 }
 
 #feed {
@@ -91,6 +91,6 @@
 
 #groom {
 	position: absolute;
-	top: 160px;
+	top: 300px;
 	right: 0;
 }
