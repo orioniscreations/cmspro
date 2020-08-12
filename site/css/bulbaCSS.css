@@ -94,3 +94,13 @@
 	top: 300px;
 	right: 0;
 }
+
+
+#stats{
+	text-align: center;
+
+	display: absolute;
+	margin-top: 60px;
+
+	
+}

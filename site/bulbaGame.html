@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/choose.css">
+    <link rel="stylesheet" href="/css/bulbaCSS.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js" crossorigin="anonymous"></script>
+
+
+    <title>Pokegatchi</title>
+</head>
+
+<body>
+
+    <nav>
+
+        <button class="openbtn" onclick="openNav()">☰ <img src="/img/pkmn/favicon.png" alt=""
+                style="height: 50px;"></button>
+
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="#">My Profile</a>
+            <a href="#">Team</a>
+            <a href="#">Pokemart</a>
+            <a href="#">Contact</a>
+        </div>
+
+    </nav>
+
+
+
+
+    <div id="statBox">
+        <div id="statInner">
+            <!-- <img :src="`/img/pkmn/bulbasaur/${currentImage}`" alt="" id="pokeCutieB"> -->
+
+            <img src="/img/pkmn/bulbaTitle.png" alt="" class="PokeTitle">
+
+            <img src="/img/health/play/playbar1000.png" alt="" class="healthBar">
+
+            <img src="/img/health/Hunger/foodBar2000.png" alt="" class="healthBar">
+
+            <img src="/img/health/health/potionBar5000.png" alt="" class="healthBar">
+
+            <img src="/img/health/groom/groomBar3000.png" alt="" class="healthBar">
+
+
+        </div>
+    </div>
+
+    <div id="bodyCont">
+
+        <div id="chooseCont">
+
+            <div id="titleText">
+                Play: {{play}}
+                Hunger: {{food}}
+                Health: {{health}}
+                Hygiene: {{grooming}}
+                Happiness: {{happiness}}
+
+
+            </div>
+
+            <div id="BLAH"></div>
+
+            <!-- <button onclick="moreHappy()">+Happy</button> -->
+
+            <div id="play">
+
+                <img src="/img/moreSprites/play.png" alt="play" id="buttPlay" onclick="morePlay()">
+            </div>
+
+            <div id="potion">
+                <img src="/img/moreSprites/potion.png" alt="potion" id="buttPotion" onclick="moreHealth()">
+            </div>
+
+
+            <div id="feed">
+                <img src="/img/moreSprites/feed.png" alt="feed" id="buttHunger" onclick="moreFood()">
+
+            </div>
+
+            <div id="groom">
+
+                <img src="/img/moreSprites/groom.png" alt="groom" id="buttGroom" onclick="moreGrooming()">
+
+            </div>
+
+            <div id="bulbaCont">
+
+
+
+                <div id="pokeCutie">
+
+                    <img :src="`/img/pkmn/bulbasaur/${currentImage}`" alt="" id="pokeCutieB">
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Testing -->
+
+
+
+
+        <!--  -->
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+
+    <div id="credits">
+
+        <p style="text-align: center;">
+            This is an <b>unofficial, no-profit, fan-made</b> site,
+            <br>
+            and is in no way linked to Nintendo, game freak, or any
+            subsiduaries. All rights go to the creators.
+        </p>
+    </div>
+
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img src="/img/pkmn/bulbaResting.png" alt="" style="width: 50%; margin-left: 25%;">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+
+                    You were an irresponsible partner, and left Bulbasaur for too long. It'll be
+                    okay after a
+                    good sleep, but it may
+                    not be <b>happy </b>about it.
+
+
+                    <img src="/img/pkmn/bulbasaur/bulbaSleepy.gif" alt="">
+
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+                    <button type="button" class="btn btn-primary">Use Awakening</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/bulbaJS.js"></script>
+
+    <script>
+
+        $(".image-container").mouseover(function (e) {
+            $(this).attr("src", $(this).attr("src").replace(".png", ".gif"));
+        }).mouseout(function (e) {
+            $(this).attr("src", $(this).attr("src").replace(".gif", ".png"));
+        });
+
+    </script>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+</body>
+
+
+
+</html>
