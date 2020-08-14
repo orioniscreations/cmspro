@@ -95,6 +95,7 @@ var game = new Vue({
 
 })
 
+
 // // ********************************
 
 function lessPlay() {
@@ -158,52 +159,61 @@ function lessHealth() {
 
     minusHealth -= 10;
     game.health--;
+
+    if (game.health <= 1) {
+        $("#exampleModal").modal();
+    }
 }
 
 function highHealth() {
 
     if (game.play >= 1000 && game.food >= 2000 && game.grooming >= 3000) {
         game.currentImage = IMAGES.happy;
+        document.getElementById('statbar2').src = "/img/health/idea3/full.png";
+        game.happiness++;
     } else if
         (game.play <= 300 && game.play >= 2 || game.food <= 500 && game.food >= 2 || game.grooming <= 750 && game.grooming <= 2) {
         game.currentImage = IMAGES.sad;
+        document.getElementById('statbar2').src = "/img/health/idea3/stage1.png";
         lessHealth();
     } else if
         (game.play <= 1 || game.food <= 1 || game.grooming <= 1) {
         game.currentImage = IMAGES.sleepy;
+        document.getElementById('statbar2').src = "/img/health/idea3/empty.png";
         sleepyTime();
-    } else { game.currentImage = IMAGES.default }
+    } else {
+        game.currentImage = IMAGES.default
+        document.getElementById('statbar2').src = "/img/health/idea3/stage2.png";
+    }
 
     setTimeout(highHealth, 500)
 }
 
 highHealth();
 
+function evolve() {
+    if (game.happiness >= 1000) {
+        window.location = "/ivyGame.html";
+    }
+}
+
+evolve();
+
 function sleepyTime() {
-    if (game.play <= 1 || game.food <= 1 || game.grooming <= 1) {
+    if (game.play <= 1 && game.food <= 1 && game.grooming <= 1) {
+
+        game.happiness--;
 
     }
 }
 
-// function lessHealth() {
-//     if (game.play <= 300 || game.food <= 500 || game.grooming <= 750) {
-//         var minusHealth = 5000;
-//         var timer = null;
 
-//         if (game.health === -1) { return; }
+function wakeUp() {
+    window.localStorage.clear()
+    window.location.reload();
+}
 
 
-//         setTimeout(lessHealth, minusHealth);
-
-//         minusHealth -= 100;
-//         game.health--;
-//     }
-
-// }
-
-// lessHealth();
-
-// // ********************************
 
 function morePlay() {
     game.play += 100
